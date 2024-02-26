@@ -19,7 +19,7 @@ pub fn run(path: String) {
     match contents {
         Ok(contents) => {
             for element in contents {
-                println!("{:?}", element);
+                println!("{:?}", element.expect("Invalid File").path());
             }
         },
 
